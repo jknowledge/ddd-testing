@@ -1,7 +1,7 @@
 package de.jknowledge.domain.article;
 
-import de.jknowledge.domain.EntityBase;
-import de.jknowledge.domain.IAggregateRoot;
+import de.jknowledge.domain.dddbase.EntityBase;
+import de.jknowledge.domain.dddbase.IAggregateRoot;
 
 public class ArticleEntity extends EntityBase implements IAggregateRoot {
 
@@ -24,14 +24,12 @@ public class ArticleEntity extends EntityBase implements IAggregateRoot {
 
     public void addDiscount() {
         double discountPercentage = 0;
-        if(this.articlePrice.doubleValue() > 50d && this.articlePrice.doubleValue() < 100d) {
+        if(this.articlePrice > 50d && this.articlePrice < 100d) {
             discountPercentage = 2d;
-        } else if (this.articlePrice.doubleValue() > 50d) {
+        } else if (this.articlePrice > 50d) {
             discountPercentage = 3d;
         }
-        if(this.articlePrice != null) {
-            this.articlePrice = this.articlePrice - (this.articlePrice * Double.valueOf(discountPercentage) / 100);
-        }
+        this.articlePrice = this.articlePrice - (this.articlePrice * discountPercentage / 100);
     }
 
 

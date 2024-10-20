@@ -1,2 +1,2 @@
-# ddd-testing
-Example hot to create domain driven design unit tests wiith builder pattern
+# Testing with Domain Objects instead of Random Data
+To maintain unit tests, using the builder pattern with test objects instead of random test data can increase readability and, therefore, maintainability. Ideally, real personas from corresponding user stories can be used to test the code. The builder pattern should construct these personas (or their variations) to design the test cases around them.

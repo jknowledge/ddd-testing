@@ -1,4 +1,4 @@
-package de.jknowledge.domain;
+package de.jknowledge.domain.dddbase;
 
 import java.util.UUID;
 
