@@ -18,7 +18,7 @@ public class ArticleEntityTest {
     @Test
     public void testAddDiscoutWithNoDiscount() {
         // given
-        ArticleEntity colaArticle = articleBuilder.BuildCocaColaArticle();
+        ArticleEntity colaArticle = articleBuilder.buildCocaColaArticle();
         Double currentPrice = colaArticle.getArticlePrice();
 
         // when
@@ -31,7 +31,7 @@ public class ArticleEntityTest {
     @Test
     public void testAddDiscoutWithTwoPercentageDiscount() {
         // given
-        ArticleEntity colaArticle = articleBuilder.BuildToothbrushArticle();
+        ArticleEntity colaArticle = articleBuilder.buildToothbrushArticle();
         Double currentPrice = colaArticle.getArticlePrice();
         Double newPrice = currentPrice - (currentPrice * 2) / 100;
 
@@ -45,7 +45,7 @@ public class ArticleEntityTest {
     @Test
     public void testAddDiscoutWithThreePercentageDiscount() {
         // given
-        ArticleEntity colaArticle = articleBuilder.BuildNotebookArticle();
+        ArticleEntity colaArticle = articleBuilder.buildNotebookArticle();
         Double currentPrice = colaArticle.getArticlePrice();
         Double newPrice = currentPrice - (currentPrice * 3) / 100;
 
